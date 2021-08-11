@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Portfolio</title>
+    </head>
+
+    <body>
+        <!--NAVIGATION BAR-->
+        <nav id="menu">
+            <a href="../index.html"><img src="../images/Avatar1.png" alt="Profil"></a>
+            <a href="../index.html"><h1>Laura Huber</h1></a>
+            
+            <!--DROPDOWN MENU-->
+            <div class="sidenav">
+                <button class="dropdown-btn">CV
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="experience.html">Expérience</a>
+                  <a href="formation.html">Formation</a>
+                  <a href="competences.html">Compétences</a>
+                </div>
+                <button class="dropdown-btn">Entreprise
+                    <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="presentation.html">Présentation</a>
+                    <a href="missions.html">Mes missions</a>
+                  </div>
+            </div> 
+
+            <script>
+                /*loop through dropdown buttons to toggle between hiding and showing content*/
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+                
+                for (i = 0; i < dropdown.length; i++) {
+                  dropdown[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                  } else {
+                  dropdownContent.style.display = "block";
+                  }
+                  });
+                }
+            </script>
+
+            <!--CONTACT SECTION-->
+            <section class="contact">
+                <h2></h2>
+                <div id="contact-content">
+                    <ul>
+                        <li><a href="mailto:email@address.com" class="fa fa-envelope"></a></li>
+                        <li><a href="tel:01.02.03.04.05" class="fa fa-phone"></a></li>
+                        <li><a href="https://github.com" class="fa fa-github"></a></li>
+                        <li><a href="../docs/CV_anonyme.pdf" class="fa fa-download" download title="Télécharger mon CV"></a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+
+        <!--SITE CONTENT-->
+        <section id="content">
+            <h1>Formation</h1>
+            <h2>Brevet de technicien supérieur (BTS)<br />
+                <span>2020 - 2022</span></h2>
+
+            <h3>Services informatiques aux organisations option SLAM</h3>
+
+            <hr>
+
+            <h2>Licence 2<br />
+                <span>2016 - 2018</span></h2>
+
+            <h3>LEA Anglais-Suédois</h3>
+        </section>
+    </body>
+</html>

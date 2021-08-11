@@ -1,0 +1,208 @@
+html
+{
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: black;
+    color: white;
+}
+
+/*body style*/
+body
+{
+    min-width: 1500px;
+    width: 100%;
+}
+
+/*prevent scrollbars*/
+html, body, #menu
+{
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*image style and position*/
+img
+{
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 60px auto 0 auto;
+}
+
+/*link colour and decoration*/
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+/*link colour on hover*/
+a:hover, .dropdown-btn:hover, .dropdown-container a:hover
+{
+    color: lightseagreen;
+}
+
+/*menu style*/
+#menu
+{
+    position: fixed;
+    width: 400px;
+    border-right: 1px solid rgb(66, 66, 66);
+}
+
+/*menu heading size and position*/
+#menu h1
+{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/*side menu margin*/
+.sidenav
+{
+    margin-top: 120px;
+}
+
+/*dropdown button style*/
+.dropdown-btn 
+{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 6px 50px 6px 50px;
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/*down arrow icon style*/
+.fa-angle-down 
+{
+    float: right;
+    padding-right: 8px;
+} 
+
+/*dropdown container style (hidden by default)*/
+.dropdown-container 
+{
+    display: none;
+    font-size: 1.8em;
+    background-color: #0f0f0f;
+    padding-left: 40px;
+}
+
+/*dropdown container item style*/
+.dropdown-container a
+{
+    color: rgb(177, 177, 177);
+    display: flex;
+    flex-direction: column;
+    padding: 8px
+}
+
+/*contact section position*/
+.contact
+{
+    position: fixed;
+    bottom: 1%;
+}
+
+/*contact heading size*/
+.contact h2
+{
+    text-align: center;
+    font-size: 2em;
+}
+
+/*bullet list styling*/
+div ul
+{
+    font-size: 2em;
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+/*display contact links in row*/
+#contact-content ul li
+{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/*site content position*/
+#content
+{
+    min-width: 800px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/*site content header size and style*/
+#content h1
+{
+    font-size: 4em;
+    text-decoration: underline;
+    text-decoration-color: lightseagreen;
+    text-align: center;
+}
+
+/*span tag style*/
+span
+{
+    color: rgb(158, 158, 158);
+    font-style: normal;  
+    font-size: 0.8em;
+}
+
+/*site content section header style*/
+#content h2
+{
+    color: lightseagreen;
+    font-size: 2em;
+    text-align: justify;
+}
+
+/*site content text size and justify*/
+#content h3, #content ul, #content p
+{
+    font-size: 1.8em;
+    text-align: justify;
+}
+
+/*map image style*/
+#carte
+{
+    border-radius: 1%;
+    width: 90%;
+    height: auto;
+    filter: invert(100%);
+    margin-bottom: 100px;
+}
+
+#content li
+{
+    line-height: 2;
+}
+
+/*break line style*/
+hr
+{
+    width: 100%;
+    margin: 40px 0 40px 0;
+}
+
+

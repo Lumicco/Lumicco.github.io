@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Portfolio</title>
+    </head>
+
+    <body>
+        <!--NAVIGATION BAR-->
+        <nav id="menu">
+            <a href="../index.html"><img src="../images/Avatar1.png" alt="Profil"></a>
+            <a href="../index.html"><h1>Laura Huber</h1></a>
+            
+            <!--DROPDOWN MENU-->
+            <div class="sidenav">
+                <button class="dropdown-btn">CV
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="experience.html">Expérience</a>
+                  <a href="formation.html">Formation</a>
+                  <a href="competences.html">Compétences</a>
+                </div>
+                <button class="dropdown-btn">Entreprise
+                    <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="presentation.html">Présentation</a>
+                    <a href="missions.html">Mes missions</a>
+                  </div>
+            </div> 
+
+            <script>
+                /*loop through dropdown buttons to toggle between hiding and showing content*/
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+                
+                for (i = 0; i < dropdown.length; i++) {
+                  dropdown[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                  } else {
+                  dropdownContent.style.display = "block";
+                  }
+                  });
+                }
+            </script>
+
+            <!--CONTACT SECTION-->
+            <section class="contact">
+                <h2></h2>
+                <div id="contact-content">
+                    <ul>
+                        <li><a href="mailto:email@address.com" class="fa fa-envelope"></a></li>
+                        <li><a href="tel:01.02.03.04.05" class="fa fa-phone"></a></li>
+                        <li><a href="https://github.com" class="fa fa-github"></a></li>
+                        <li><a href="../docs/CV_anonyme.pdf" class="fa fa-download" download title="Télécharger mon CV"></a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+
+        <!--SITE CONTENT-->
+        <section id="content">
+            <h1>La DISP de Paris</h1>
+            <h2>La Direction Interrégionale des Services Pénitentiaires de Paris est un service déconcentré du ministère de la Justice, 
+                relevant de la direction de l'administration pénitentiaire.</h2>
+
+            <p>Elle est l'une des dix directions interrégionales des services pénitentiaires 
+                présentes sur le territoire métropolitain et d'outre-mer.</p>
+
+            <p>Elle anime, coordonne et contrôle l'activité des établissements et des services pénitentiaires placés sous son autorité, 
+                en regroupant les 8 départements franciliens, sur le ressort des cours d'appel de Paris (75) et de Versailles (78).</p>
+
+            <img id="carte" src="../images/Carte_établissements_pénitentiaires_et_SPIP_IDF.jpg" alt="Carte des établissements pénitentiaires et SPIP d'IDF">
+            
+            <h2>Les enjeux de la DISP de Paris sont :</h2>
+
+            <ul>
+                <li>La stabilisation de la population carcérale</li>
+                <li>La strucuration de la coordination santé justice</li>
+                <li>La lutte contre la radicalisation en milieu fermé et ouvert</li>
+                <li>Le développement des aménagements de peine</li>
+                <li>Le plan interrégional de lutte contre les violences</li>
+                <li>La prévention du suicide</li>
+            </ul>    
+            
+            <h2 style="margin-top: 100px;">Coordonnées</h2>
+            <p>DISP PARIS<br />
+                3 Avenue de la Division Leclerc<br />
+                BP 103<br />
+                94267 Fresnes Cedex<br />
+                01.88.28.70.00</p>
+
+            <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=2.319595813751221%2C48.75932383509241%2C2.3223531246185307%2C48.76157113537392&amp;layer=mapnik&amp;marker=48.7604474978016%2C2.3209744691848755" 
+                    style="border-radius: 1%; filter: invert(100%); margin-bottom: 50px;"></iframe><br/>
+
+
+
+            <hr>
+
+            <h1>Le Département des Systèmes d’Information</h1>
+            <h2>Le département des systèmes d’information (DSI) est chargé de mettre en oeuvre les applications informatiques nationales 
+                et d'assurer la cohérence des systèmes d’informations interrégionaux.</h2>
+
+            <p>Le département applique toutes les procédures et dispositifs pour assurer la sécurité des systèmes d’information (SSI).</p>
+
+            <p>Le DSI détermine, sur la base des orientations définies par l’administration centrale, les modalités de mise en œuvre et de maintenance 
+                des infrastructures informatiques, des applications nationales, des activités de support aux utilisateurs et de la sécurité des systèmes d’information. 
+                Il associe les autres départements à la conception et à la réalisation des actions interrégionales, ainsi qu’au suivi et à l’évaluation de leur exécution.</p>
+
+            <p>En liaison avec les chefs de service et les directeurs des services pénitentiaires d’insertion et de probation, il évalue les besoins en patrimoine informatique, 
+                assure la programmation et le financement des nouvelles acquisitions et des renouvellements et supervise leur déploiement.</p>
+
+            <p>Il anime le réseau des correspondants locaux du système d’information, situés dans les établissements pénitentiaires et les SPIP, 
+                coordonne l’accomplissement de leurs missions et anime leurs actions. Il contribue à la formation des agents aux applications informatiques régionales 
+                et apporte conseil et assistance fonctionnelle.</p>
+        </section>
+    </body>
+</html>

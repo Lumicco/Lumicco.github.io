@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Portfolio</title>
+    </head>
+
+    <body>
+        <!--NAVIGATION BAR-->
+        <nav id="menu">
+            <a href="../index.html"><img src="../images/Avatar1.png" alt="Profil"></a>
+            <a href="../index.html"><h1>Laura Huber</h1></a>
+            
+            <!--DROPDOWN MENU-->
+            <div class="sidenav">
+                <button class="dropdown-btn">CV
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="experience.html">Expérience</a>
+                  <a href="formation.html">Formation</a>
+                  <a href="competences.html">Compétences</a>
+                </div>
+                <button class="dropdown-btn">Entreprise
+                    <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="presentation.html">Présentation</a>
+                    <a href="missions.html">Mes missions</a>
+                  </div>
+            </div> 
+
+            <script>
+                /*loop through dropdown buttons to toggle between hiding and showing content*/
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+                
+                for (i = 0; i < dropdown.length; i++) {
+                  dropdown[i].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  var dropdownContent = this.nextElementSibling;
+                  if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                  } else {
+                  dropdownContent.style.display = "block";
+                  }
+                  });
+                }
+            </script>
+
+            <!--CONTACT SECTION-->
+            <section class="contact">
+                <h2></h2>
+                <div id="contact-content">
+                    <ul>
+                        <li><a href="mailto:email@address.com" class="fa fa-envelope"></a></li>
+                        <li><a href="tel:01.02.03.04.05" class="fa fa-phone"></a></li>
+                        <li><a href="https://github.com" class="fa fa-github"></a></li>
+                        <li><a href="../docs/CV_anonyme.pdf" class="fa fa-download" download title="Télécharger mon CV"></a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+
+        <!--SITE CONTENT-->
+        <section id="content">
+            <h1>Expérience</h1>
+            <h2>Direction interrégionale des services pénitentiaires de Paris<br />
+                <span>Avril 2021 - maintenant</span></h2>
+
+            <h3>Alternante en développement informatique</h3>
+
+            <ul>
+                <li>Création d’une page web (annuaire/catalogue des services de la DSI)</li>
+                <li>Développement d’un logiciel de pointage</li>
+            </ul>
+
+            <hr>
+
+            <h2>Traduction Français/Anglais/Allemand<br />
+                <span>Septembre 2018 - février 2020 (1,5 ans)</span></h2>
+
+            <h3>Activité indépendante</h3>
+
+            <ul>
+                <li>Entrepreunariat</li>
+                <li>Gestion de temps</li>
+            </ul>
+
+            <hr>
+
+            <h2>Restaurant Mobilis in Mobili<br />
+                <span>Novembre 2017 - octobre 2018 (1 an)</span></h2>
+
+            <h3>Employée polyvalente</h3>
+
+            <ul>
+                <li>Accueil, renseignement des clients, prise et service des commandes</li>
+                <li>Préparation des commandes, découpage des légumes, cuisson, dressage, écaillage</li>
+                <li>Approvisionnement, organisation de la présentation des produits</li>
+                <li>Étiquetage et rangement des produits</li>
+                <li>Entretien de la salle du restaurant, de la cuisine, des toilettes et des équipements, plonge</li>
+            </ul>
+
+            <hr>
+
+            <h2>Supermarché HIT<br />
+                <span>Novembre - décembre 2015 (2 mois)</span></h2>
+
+            <h3>Employée polyvalente</h3>
+
+            <ul>
+                <li>Gestion de la caisse et compétences de base en comptabilité</li>
+                <li>Rangement des produits et réassort de la marchandise dans les rayons</li>
+                <li>Orienter et renseigner les clients</li>
+            </ul>
+
+            <hr>
+
+            <h2>Hospice Kliniken Wied<br />
+                <span>Janvier 2014 (2 semaines)</span></h2>
+
+            <h3>Stage</h3>
+
+            <ul>
+                <li>Découverte de l'ergothérapie</li>
+                <li>Aider les gens à surmonter des dépendances</li>
+                <li>Observer et communiquer avec les patients et le personnel</li>
+            </ul>
+        </section>
+    </body>
+</html>
