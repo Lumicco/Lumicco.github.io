@@ -207,4 +207,40 @@ hr
     margin: 40px 0 40px 0;
 }
 
+/*change font size when screen height is 900px or less*/
+@media screen and (max-height: 900px)
+{
+    img
+    {
+        height: 170px;
+    }
 
+    #menu
+    {
+        width: 400px;
+    }
+
+    #menu h1
+    {
+        font-size: 2em;
+    }
+
+    .dropdown-btn 
+    {
+        font-size: 1.6em;
+    }
+
+    .dropdown-container 
+    {
+        font-size: 1.4em;
+    }
+}
+
+/*hide contact info when screen height is 800px or less*/
+@media screen and (max-height: 800px)
+{
+    .contact
+    {
+        display: none;
+    }
+}
