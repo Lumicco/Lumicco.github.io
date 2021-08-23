@@ -236,8 +236,8 @@ hr
     }
 }
 
-/*hide contact info when screen height is 800px or less*/
-@media screen and (max-height: 800px)
+/*hide contact info when screen height is 820px or less*/
+@media screen and (max-height: 820px)
 {
     .contact
     {
