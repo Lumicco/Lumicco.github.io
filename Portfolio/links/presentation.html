@@ -5,6 +5,51 @@
         <link rel="stylesheet" href="../style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Portfolio</title>
+        <script>
+            var addZoom = function (target) {
+            // (A) FETCH CONTAINER + IMAGE
+            var container = document.getElementById(target),
+                imgsrc = container.currentStyle || window.getComputedStyle(container, false),
+                imgsrc = imgsrc.backgroundImage.slice(4, -1).replace(/"/g, ""),
+                img = new Image();
+
+            // (B) LOAD IMAGE + ATTACH ZOOM
+            img.src = imgsrc;
+            img.onload = function () {
+                var imgWidth = img.naturalWidth/1.3,
+                    imgHeight = img.naturalHeight/1.3,
+                    ratio = imgHeight / imgWidth,
+                    percentage = ratio * 100 + '%';
+
+                // (C) ZOOM ON MOUSE MOVE
+                container.onmousemove = function (e) {
+                var boxWidth = container.clientWidth,
+                    rect = e.target.getBoundingClientRect(),
+                    xPos = e.clientX - rect.left,
+                    yPos = e.clientY - rect.top,
+                    xPercent = xPos / (boxWidth / 100) + "%",
+                    yPercent = yPos / ((boxWidth * ratio) / 100) + "%";
+
+                Object.assign(container.style, {
+                    backgroundPosition: xPercent + ' ' + yPercent,
+                    backgroundSize: imgWidth + 'px'
+                });
+                };
+
+                // (D) RESET ON MOUSE LEAVE
+                container.onmouseleave = function (e) {
+                Object.assign(container.style, {
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                });
+                };
+            }
+            };
+
+            window.addEventListener("load", function(){
+            addZoom("zoom-img");
+            });
+        </script>
     </head>
 
     <body>
@@ -102,6 +147,11 @@
 
 
 
+            <hr>
+
+            <h1>Organigramme</h1>
+            <div id="zoom-img"></div>
+            
             <hr>
 
             <h1>Le Département des Systèmes d’Information</h1>

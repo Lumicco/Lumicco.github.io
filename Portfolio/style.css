@@ -194,6 +194,18 @@ span
     margin-bottom: 100px;
 }
 
+/*organizational chart style and zoom*/
+#zoom-img
+{
+    width: 100%;
+    height: 400px;
+    background: url("images/Organigramme.png");
+    background-position: center;
+    background-size: cover;
+    filter: invert(100%);
+    margin-bottom: 100px;
+}
+
 /*site content bullet point line height*/
 #content li
 {
