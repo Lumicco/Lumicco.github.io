@@ -121,6 +121,19 @@ a:hover, .dropdown-btn:hover, .dropdown-container a:hover
     font-size: 2em;
 }
 
+/*link colour and decoration*/
+.fiches
+{
+    color: lightseagreen;
+    text-decoration: none;
+}
+
+/*link colour on hover*/
+.fiches:hover
+{
+    color: white;
+}
+
 /*bullet list styling*/
 div ul
 {
